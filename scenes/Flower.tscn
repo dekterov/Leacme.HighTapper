@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Flower.escn" type="PackedScene" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.188235, 0.760784, 0.0313726, 1 )
+roughness = 0.27
+
+[sub_resource type="OpenSimplexNoise" id=4]
+period = 28.0
+
+[sub_resource type="NoiseTexture" id=5]
+as_normalmap = true
+noise = SubResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.968627, 1, 0, 1 )
+roughness = 0.8
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = SubResource( 5 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.866667, 0.992157, 1, 1 )
+roughness = 0.38
+
+[node name="Flower" instance=ExtResource( 1 )]
+
+[node name="Stem" parent="." index="0"]
+material/0 = SubResource( 1 )
+
+[node name="Center" parent="Stem" index="0"]
+material/0 = SubResource( 2 )
+
+[node name="Petal" parent="Stem/Center" index="0"]
+transform = Transform( 2.71174, 0.808077, -0.141167, 2.04316, -7.27535, -0.277596, -0.483889, 0.179556, -0.957041, -3.49001, -0.773579, 0.106321 )
+material/0 = SubResource( 3 )
+
+[node name="Petal001" parent="Stem/Center" index="1"]
+transform = Transform( 2.12314, 0.81703, -0.58964, 2.03714, -7.26351, -0.315961, -1.75597, -0.205083, -0.764825, -3.06924, -0.550022, 2.25743 )
+material/0 = SubResource( 3 )
+
+[node name="Petal002" parent="Stem/Center" index="2"]
+transform = Transform( 0.408052, -0.00489996, -0.801311, 0.293277, -6.3456, 0.0217803, -2.35258, -0.11284, -0.138602, -0.883197, 0.236382, 3.21055 )
+material/0 = SubResource( 3 )
+
+[node name="Petal003" parent="Stem/Center" index="3"]
+transform = Transform( 2.074, 0.232836, 0.665244, 0.403053, -7.57518, 0.161456, 1.96321, -0.0258044, -0.707478, -2.50622, 0.658894, -2.43199 )
+material/0 = SubResource( 3 )
+
+[node name="Petal004" parent="Stem/Center" index="4"]
+transform = Transform( -0.517995, -0.0850439, 0.956487, -0.380953, -7.58525, -0.101954, 2.80888, -0.161324, 0.174432, 0.360576, 0.678936, -3.49303 )
+material/0 = SubResource( 3 )
+
+[node name="Petal005" parent="Stem/Center" index="5"]
+transform = Transform( -2.61405, -0.192384, 0.38918, 0.465877, -7.5835, -0.0717199, 1.1466, -0.00238585, 0.89139, 2.89831, 0.0681801, -1.87245 )
+material/0 = SubResource( 3 )
+
+[node name="Petal006" parent="Stem/Center" index="6"]
+transform = Transform( -2.4507, -0.372698, -0.346234, 1.1494, -7.20148, -0.102947, -0.958504, -0.269651, 0.867776, 3.05609, -1.04498, 1.03702 )
+material/0 = SubResource( 3 )
+
+[node name="Petal007" parent="Stem/Center" index="7"]
+transform = Transform( -1.45771, -0.331438, -0.698996, 0.911027, -7.5307, 0.13735, -2.43644, -0.200345, 0.425477, 1.12314, -1.23989, 2.19516 )
+material/0 = SubResource( 3 )
