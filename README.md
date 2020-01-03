@@ -4,6 +4,7 @@
 
 This application features the ability to tap on your device's touchscreen and grow the flower.
 
+![index](https://user-images.githubusercontent.com/6654513/71702235-7b445000-2d8b-11ea-9dac-1ea89f8d5855.png)
 ![][image_screenshot]
 
 ## Application Compiling
